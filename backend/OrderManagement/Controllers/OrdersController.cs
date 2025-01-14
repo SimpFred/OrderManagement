@@ -56,17 +56,17 @@ namespace OrderManagement.Controllers
         {
             try
             {
-                // Kontrollera om kunden finns i databasen
+                // Check if the customer exists in the database
                 var customer = await _context.Customers.FindAsync(order.CustomerId);
                 if (customer == null)
                 {
                     return BadRequest("Invalid customer ID.");
                 }
 
-                // Sätt Customer-navigeringsegenskapen till den befintliga kunden
+                // Set the Customer navigation property to the existing customer
                 order.Customer = customer;
 
-                // Skapa nya produktposter för ordern
+                // Create new product entries for the order
                 var orderProducts = new List<Product>();
                 foreach (var product in order.Products)
                 {
@@ -79,7 +79,7 @@ namespace OrderManagement.Controllers
                     orderProducts.Add(newProduct);
                 }
 
-                // Sätt produkterna i ordern
+                // Set the products in the order
                 order.Products = orderProducts;
 
                 _context.Orders.Add(order);

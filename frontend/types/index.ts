@@ -20,7 +20,7 @@ export interface Order {
   customerId: number;
   customer: Customer;
   products: Product[];
-  createdAt: string; // DateTime in C# is typically represented as a string in JSON
-  shippedAt?: string; // Optional property
+  createdAt: string;
+  shippedAt?: string;
   totalCost: number;
 }

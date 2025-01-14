@@ -15,7 +15,6 @@ namespace OrderManagement.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Konfigurera relationer
             modelBuilder.Entity<Order>()
                 .HasOne(o => o.Customer)
                 .WithMany()

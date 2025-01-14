@@ -8,9 +8,9 @@ namespace OrderManagement.Models
         public int Id { get; set; }
 
         [Required]
-        public int CustomerId { get; set; } // Främmande nyckel
+        public int CustomerId { get; set; } // Foreign key
 
-        public Customer? Customer { get; set; } // Navigeringsegenskap
+        public Customer? Customer { get; set; } // Navigation property
 
         [Required]
         public List<Product> Products { get; set; } = new List<Product>();

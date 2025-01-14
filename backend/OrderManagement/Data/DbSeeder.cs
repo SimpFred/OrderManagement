@@ -6,10 +6,10 @@ namespace OrderManagement.Data
     {
         public static void Seed(AppDbContext context)
         {
-            // Kontrollera om data redan finns
+            // Seed the database with data if it's empty
             if (!context.Customers.Any())
             {
-                // Skapa kunder
+                // Create customers
                 var customers = new List<Customer>
                 {
                     new Customer { Name = "Alice Johnson", Email = "alice@example.com", Address = "123 Main St", ZipCode = "12345", Country = "USA", City = "New York" },
@@ -24,13 +24,13 @@ namespace OrderManagement.Data
 
             if (!context.Orders.Any())
             {
-                // Hämta kunder från databasen
+                // Fetch customers from the database
                 var alice = context.Customers.First(c => c.Name == "Alice Johnson");
                 var bob = context.Customers.First(c => c.Name == "Bob Smith");
                 var charlie = context.Customers.First(c => c.Name == "Charlie Brown");
                 var matilda = context.Customers.First(c => c.Name == "Matilda Johansson");
 
-                // Skapa beställningar
+                // Create Orders
                 var orders = new List<Order>
                 {
                     new Order
