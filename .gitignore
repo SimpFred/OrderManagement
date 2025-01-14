@@ -34,6 +34,6 @@ appsettings.Development.json
 
 
 # Sensitive data
-
+.appsettings.json
 \*\*/secrets.json
 .env
