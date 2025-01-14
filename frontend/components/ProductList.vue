@@ -60,14 +60,7 @@
           <td
             class="py-2 px-4 border-t border-gray-200 text-left text-sm font-semibold text-gray-800"
           >
-            {{
-              formatPrice(
-                order.products.reduce(
-                  (sum, product) => sum + product.quantity * product.price,
-                  0
-                )
-              )
-            }}
+            {{ formatPrice(order.totalCost) }}
             SEK
           </td>
         </tr>
@@ -80,5 +73,5 @@
 import { defineProps } from "vue";
 import type { Order } from "~/types";
 
-const props = defineProps<{ order: Order }>();
+defineProps<{ order: Order }>();
 </script>

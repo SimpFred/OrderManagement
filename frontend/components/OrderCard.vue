@@ -1,8 +1,8 @@
 <template>
-  <div
-    class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg hover:bg-slate-100 active:bg-slate-200 transition-bg duration-300"
-  >
-    <nuxt-link :to="{ path: `/order/${order.id}` }" class="block">
+  <nuxt-link :to="{ path: `/order/${order.id}` }" class="block">
+    <div
+      class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg hover:bg-slate-100 active:bg-slate-200 transition-bg duration-300"
+    >
       <div
         class="flex flex-col md:flex-row justify-between items-start md:items-center"
       >
@@ -19,13 +19,13 @@
           </p>
         </div>
       </div>
-    </nuxt-link>
-  </div>
+    </div>
+  </nuxt-link>
 </template>
 
 <script setup lang="ts">
 import { defineProps } from "vue";
 import type { Order } from "~/types";
 
-const props = defineProps<{ order: Order }>();
+defineProps<{ order: Order }>();
 </script>

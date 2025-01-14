@@ -1,7 +1,7 @@
 <template>
   <div class="flex-1 mb-6">
     <h2 class="text-xl font-semibold mb-2">Order Information</h2>
-    <p class="text-gray-700">
+    <p class="text-gray-800">
       <span class="font-semibold">Order ID:</span> {{ order.id }}
     </p>
     <p class="text-gray-800">
@@ -23,5 +23,5 @@
 import { defineProps } from "vue";
 import type { Order } from "~/types";
 
-const props = defineProps<{ order: Order }>();
+defineProps<{ order: Order }>();
 </script>
