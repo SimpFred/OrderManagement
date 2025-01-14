@@ -22,5 +22,8 @@ namespace OrderManagement.Models
 
         [Required]
         public required string Country { get; set; }
+
+        [Required]
+        public required string City { get; set; }
     }
 }

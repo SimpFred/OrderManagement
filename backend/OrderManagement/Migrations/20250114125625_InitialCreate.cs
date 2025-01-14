@@ -22,7 +22,8 @@ namespace OrderManagement.Migrations
                     Email = table.Column<string>(type: "text", nullable: false),
                     Address = table.Column<string>(type: "text", nullable: false),
                     ZipCode = table.Column<string>(type: "text", nullable: false),
-                    Country = table.Column<string>(type: "text", nullable: false)
+                    Country = table.Column<string>(type: "text", nullable: false),
+                    City = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {

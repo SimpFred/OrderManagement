@@ -12,7 +12,7 @@ using OrderManagement.Data;
 namespace OrderManagement.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250114082118_InitialCreate")]
+    [Migration("20250114125625_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -34,6 +34,10 @@ namespace OrderManagement.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("text");
 

@@ -1,7 +1,7 @@
 <template>
   <div class="flex-1">
     <h2 class="text-xl font-semibold mb-4">Kund Information</h2>
-    <div class="flex flex-col md:flex-row md:space-x-4 md:gap-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="mb-2">
         <p class="text-gray-800">
           <span class="font-semibold">Namn:</span> {{ order.customer.name }}
@@ -13,7 +13,7 @@
         </p>
       </div>
     </div>
-    <div class="flex flex-col md:flex-row md:space-x-4 md:gap-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="mb-2">
         <p class="text-gray-800">
           <span class="font-semibold">Adress:</span>
@@ -27,10 +27,17 @@
         </p>
       </div>
     </div>
-    <div>
-      <p class="text-gray-800">
-        <span class="font-semibold">Land:</span> {{ order.customer.country }}
-      </p>
+    <div class="grid grid-cols-1 md:grid-cols-2">
+      <div class="mb-2">
+        <p class="text-gray-800">
+          <span class="font-semibold">Stad:</span> {{ order.customer.city }}
+        </p>
+      </div>
+      <div class="mb-2">
+        <p class="text-gray-800">
+          <span class="font-semibold">Land:</span> {{ order.customer.country }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
