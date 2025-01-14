@@ -1,0 +1,39 @@
+# Logs
+logs
+_.log
+
+
+node_modules
+dist
+dist-ssr
+\*.local
+
+# Editor directories and files
+
+.vscode/_
+!.vscode/extensions.json
+.idea
+.DS_Store
+_.suo
+_.ntvs_
+_.njsproj
+_.sw?
+
+# Build folders
+
+bin/
+obj/
+
+# User-specific files
+
+.vs/
+
+# Environment-specific app settings
+
+appsettings.Development.json
+
+
+# Sensitive data
+
+\*\*/secrets.json
+.env
