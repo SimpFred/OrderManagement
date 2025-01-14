@@ -22,12 +22,17 @@
           </select>
         </div>
       </div>
-      <div class="space-y-4 max-w-5xl mx-auto">
-        <OrderCard
-          v-for="order in filteredOrders"
-          :key="order.id"
-          :order="order"
-        />
+      <div v-if="filteredOrders.length > 0">
+        <div class="space-y-4 max-w-5xl mx-auto">
+          <OrderCard
+            v-for="order in filteredOrders"
+            :key="order.id"
+            :order="order"
+          />
+        </div>
+      </div>
+      <div v-else>
+        <p class="text-center text-gray-500">Det finns inga ordrar</p>
       </div>
     </div>
   </div>
