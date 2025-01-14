@@ -1,11 +1,11 @@
 <template>
-  <div class="container mx-auto p-6">
+  <div class="container mx-auto p-6 max-w-5xl">
     <div class="bg-slate-100 shadow-md rounded-lg p-6">
       <h1 class="text-3xl font-bold mb-10 text-left text-gray-800">
         Order Detaljer
       </h1>
       <div v-if="order">
-        <div class="flex flex-col lg:flex-row lg:space-x-8 mb-6">
+        <div class="flex flex-col sm:flex-row mb-6">
           <OrderInfo :order="order" />
           <CustomerInfo :order="order" />
         </div>

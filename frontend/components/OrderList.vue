@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto p-4">
-    <div class="max-w-3xl mx-auto p-6">
+    <div class="max-w-5xl mx-auto p-6">
       <div class="flex md:flex-row flex-col mb-6">
         <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">
           Beställningar
@@ -22,7 +22,7 @@
           </select>
         </div>
       </div>
-      <div class="space-y-4 max-w-3xl mx-auto">
+      <div class="space-y-4 max-w-5xl mx-auto">
         <OrderCard
           v-for="order in filteredOrders"
           :key="order.id"

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-1 mb-6 lg:mb-0">
+  <div class="flex-1 mb-6">
     <h2 class="text-xl font-semibold mb-2">Order Information</h2>
     <p class="text-gray-700">
       <span class="font-semibold">Order ID:</span> {{ order.id }}
