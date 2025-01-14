@@ -7,7 +7,7 @@
       <div v-if="order">
         <div class="flex flex-col sm:flex-row mb-6">
           <OrderInfo :order="order" />
-          <CustomerInfo :order="order" />
+          <CustomerInfo :customer="order.customer" />
         </div>
         <ProductList :order="order" />
       </div>

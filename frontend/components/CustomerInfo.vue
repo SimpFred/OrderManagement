@@ -4,12 +4,12 @@
     <div class="grid grid-cols-1 lg:grid-cols-2">
       <div class="mb-2">
         <p class="text-gray-800">
-          <span class="font-semibold">Namn:</span> {{ order.customer.name }}
+          <span class="font-semibold">Namn:</span> {{ customer.name }}
         </p>
       </div>
       <div class="mb-2">
         <p class="text-gray-800">
-          <span class="font-semibold">Email:</span> {{ order.customer.email }}
+          <span class="font-semibold">Email:</span> {{ customer.email }}
         </p>
       </div>
     </div>
@@ -17,25 +17,25 @@
       <div class="mb-2">
         <p class="text-gray-800">
           <span class="font-semibold">Adress:</span>
-          {{ order.customer.address }}
+          {{ customer.address }}
         </p>
       </div>
       <div class="mb-2">
         <p class="text-gray-800">
           <span class="font-semibold">Postnummer:</span>
-          {{ order.customer.zipCode }}
+          {{ customer.zipCode }}
         </p>
       </div>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2">
       <div class="mb-2">
         <p class="text-gray-800">
-          <span class="font-semibold">Stad:</span> {{ order.customer.city }}
+          <span class="font-semibold">Stad:</span> {{ customer.city }}
         </p>
       </div>
       <div class="mb-2">
         <p class="text-gray-800">
-          <span class="font-semibold">Land:</span> {{ order.customer.country }}
+          <span class="font-semibold">Land:</span> {{ customer.country }}
         </p>
       </div>
     </div>
@@ -44,7 +44,7 @@
 
 <script setup lang="ts">
 import { defineProps } from "vue";
-import type { Order } from "~/types";
+import type { Customer } from "~/types";
 
-const props = defineProps<{ order: Order }>();
+defineProps<{ customer: Customer }>();
 </script>
