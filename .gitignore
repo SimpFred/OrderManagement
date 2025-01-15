@@ -37,3 +37,6 @@ appsettings.Development.json
 appsettings.json
 \*\*/secrets.json
 .env
+
+# Nuxt build and generated files
+.nuxt/
