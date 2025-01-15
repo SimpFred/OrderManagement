@@ -58,10 +58,10 @@ if (error.value) {
   orders.value = data.value ?? [];
 }
 
-// Computed property to filter orders based on search query and criteria
+// Computed property to filter and sort orders based on search query and criteria
 const filteredOrders = computed(() => {
-  return orders.value.filter((order) => {
-    const query = searchQuery.value.toLowerCase();
+  const query = searchQuery.value.toLowerCase();
+  const filtered = orders.value.filter((order) => {
     if (searchCriteria.value === "id") {
       return order.id.toString().includes(query);
     } else if (searchCriteria.value === "name") {
@@ -71,6 +71,16 @@ const filteredOrders = computed(() => {
       return formattedCreatedAt.includes(query);
     }
     return false;
+  });
+
+  // Sort orders by date, newest first
+  return filtered.sort((a, b) => {
+    const dateComparison =
+      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    if (dateComparison !== 0) {
+      return dateComparison;
+    }
+    return b.id - a.id; // Sort by order ID if dates are the same
   });
 });
 </script>
